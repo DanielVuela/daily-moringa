@@ -4,6 +4,7 @@ module.exports = function(controller) {
     const YESTERDAY_ID = '002';
     const TODAY_ID = '003';
     const BLOCKERS_ID = '004';
+    const dataService = require('../components/dataUtil/dsuData.js');
 
     controller.on('slash_command', function (bot, message) {
         var channelId = message.channel_id;
@@ -28,7 +29,6 @@ module.exports = function(controller) {
                         user: member
                     }, function (err, convo) {
                         if (!err && convo) {
-                            //convo.say('Hello there! I messaged you because you where in the channel #dsu');
                             startDSU(convo);
                         }
                     });
@@ -73,7 +73,6 @@ module.exports = function(controller) {
                 callback: function(reply, convo) {
                     convo.next();
                     askYesterday(convo);
-
                 }
             },
             {

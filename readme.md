@@ -6,6 +6,9 @@ This project was build with node.js and botkit to manage the integration with sl
 
 Also checkout the official Botkit documentation repo here: (https://github.com/howdyai/botkit/blob/master/docs/readme.md#developing-with-botkit)
 
+## Usage
+TODO
+
 ## Install 
 TODO
 
